@@ -312,7 +312,7 @@ class PrivateRecipeApiTests(TestCase):
             'title': 'Vietnamese soup',
             'time_minutes': 25,
             'price': Decimal('2.55'),
-            'ingredients': [{'name:' 'Lemon'}, {'name': 'Fish sauce'}],
+            'ingredients': [{'name': 'Lemon'}, {'name': 'Fish sauce'}],
         }
         res = self.client.post(RECIPES_URL, payload, format='json')
         self.assertEqual(res.status_code, status.HTTP_201_CREATED)
